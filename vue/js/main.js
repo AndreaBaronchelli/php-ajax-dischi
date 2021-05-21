@@ -24,7 +24,7 @@ const app = new Vue({
     methods: {
         filtering(value) {
             axios
-                .get(this.databaseAPI + "?query" + value, {
+                .get(this.databaseAPI, {
                     params: {
                         query: value,
                     },
