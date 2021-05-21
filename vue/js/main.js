@@ -2,7 +2,7 @@ const app = new Vue({
     el: "#app",
     data: {
         discs: [],
-        databaseAPI: window.location.href + "partials/database.php",
+        databaseAPI: window.location.href + "scripts/get_albums.php",
     },
     created() {
         axios
