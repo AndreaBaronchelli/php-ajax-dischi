@@ -19,7 +19,14 @@
                     </div>
                 </div>
             </header>
+
             <main>
+                <select v-model="filterText" @change="filtering(filterText)">
+                    <option value="All">All</option>
+                    <option v-for="author in authors" :value="author">
+                        {{author}}
+                    </option>
+                </select>
                 <div class="container">
                     <div v-for="disc in discs" class="card">
                         <img :src="disc.poster" alt="" />
